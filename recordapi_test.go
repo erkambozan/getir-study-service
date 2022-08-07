@@ -41,7 +41,7 @@ func TestFindRecords(t *testing.T) {
 	var actualResponse dto.RecordResponse
 
 	jsonString, _ := json.Marshal(recordRequest)
-	request, _ := http.NewRequest("GET", "/records", bytes.NewReader(jsonString))
+	request, _ := http.NewRequest("POST", "/records", bytes.NewReader(jsonString))
 	response := ExecuteRequest(request)
 	CheckResponseCode(t, http.StatusOK, response)
 
