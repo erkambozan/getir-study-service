@@ -11,6 +11,6 @@ func main() {
 
     app.Initialize()
 
-    log.Fatal(http.ListenAndServe(":4004", app.Router))
+    log.Fatal(http.ListenAndServe(":8080", app.Router))
 
 }
