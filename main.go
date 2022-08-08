@@ -11,6 +11,8 @@ func main() {
 
     app.Initialize()
 
-    log.Fatal(http.ListenAndServe(":8080", app.Router))
+    port, err := os.Getenv("PORT")
+
+    log.Fatal(http.ListenAndServe(":"+port, app.Router))
 
 }
